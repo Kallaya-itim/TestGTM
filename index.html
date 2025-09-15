@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ร้านค้าออนไลน์</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 ร้านค้าออนไลน์</h1>
+    <nav>
+      <button onclick="changeLanguage('th')">ไทย</button>
+      <button onclick="changeLanguage('en')">English</button>
+      <button onclick="toggleTheme()">สลับธีม</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="products">
+      <h2>สินค้า</h2>
+      <div class="product-list">
+        <div class="product">
+          <h3>เสื้อยืด</h3>
+          <p>ราคา: 250 บาท</p>
+          <button onclick="addToCart('เสื้อยืด', 250)">ใส่ตะกร้า</button>
+        </div>
+        <div class="product">
+          <h3>กางเกงยีนส์</h3>
+          <p>ราคา: 800 บาท</p>
+          <button onclick="addToCart('กางเกงยีนส์', 800)">ใส่ตะกร้า</button>
+        </div>
+        <div class="product">
+          <h3>รองเท้า</h3>
+          <p>ราคา: 1200 บาท</p>
+          <button onclick="addToCart('รองเท้า', 1200)">ใส่ตะกร้า</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart">
+      <h2>ตะกร้าสินค้า</h2>
+      <ul id="cart-items"></ul>
+      <p id="total">รวม: 0 บาท</p>
+      <button onclick="checkout()">สั่งซื้อ</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 ร้านค้าออนไลน์</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
